@@ -75,6 +75,10 @@ nav a:hover {
     color: transparent;
 }
 
+#home-hero-h1 {
+    font-size: clamp(3rem, 10vw, 5.5rem);
+}
+
 
 .hero p {
     margin: 0 auto;
@@ -155,14 +159,10 @@ main {
 }
 
 .info-card-right {
-    display: flex;
-    align-items: right;
     grid-template-areas:
         "copy"
         "image";
     grid-template-rows: auto 1fr;
-    
-    
 }
 
 .info-card .info-image,
@@ -228,13 +228,11 @@ footer {
     color: black;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
 }
 
 .careers-section {
     background: linear-gradient(135deg, #0d5f96 0%, #0d6fb8 100%);
-    padding: 3rem 1rem;
-    margin-top: 3rem;
+    padding: 5rem 1rem;
 }
 
 .careers-section h2 {
@@ -716,6 +714,7 @@ footer {
     .info-section {
         padding: 3.5rem 1.5rem 2.5rem;
     }
+    
 
     .info-section h2 {
         margin-bottom: 3rem;
@@ -726,6 +725,14 @@ footer {
        
         gap: 2rem;
     }
+ 
+    .info-card-right {
+        grid-template-areas:
+        "image"    
+        "copy";
+        grid-template-rows: auto 1fr;
+    }
+
     .info-card h3 {
         font-size: 1.3rem;
     }
@@ -786,27 +793,44 @@ footer {
         margin-bottom: 0.85rem;
     }
     .social-icons {
+        justify-content: center;
         gap: 1.2rem;
     }
+
     .social-icon {
         width: 48px;
         height: 48px;
     }
+
     .social-icon i {
         font-size: 1.5rem;
     }
+
     .cta-section {
         padding: 3.5rem 1.5rem;
     }
+
     .cta-content h2 {
         margin-bottom: 1.2rem;
     }
+
     .cta-content p {
         margin-bottom: 2.5rem;
     }
+
     .cta-btn {
         padding: 1.1rem 2.2rem;
     }
+
+    .skills-wrapper {
+        grid-template-columns:auto;
+        gap: 15px;
+    }
+
+    .contact-box {
+    flex-direction: column;
+    gap: 3rem;
+}
 }
 
 /* Laptop Styles */
@@ -856,7 +880,9 @@ footer {
     }
 
     .info-card-right {
-        grid-template-areas: "copy image";
+        display: flex;
+        justify-content: right;
+    
     }
 
     .info-card-right .info-image {
@@ -1008,6 +1034,11 @@ footer {
     .info-card {
         gap: 2rem;
         padding: 2rem;
+    }
+
+    .info-card-right {
+        display: flex;
+        justify-content: right;
     }
 
     .info-card .info-image {
